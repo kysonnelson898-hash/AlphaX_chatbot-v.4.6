@@ -1,0 +1,12 @@
+{
+"name": "alphax-ai-chat",
+"version": "1.0.0",
+"description": "AlphaX AI Agent Chat Interface",
+"main": "server.js",
+"scripts": {
+"start": "node server.js"
+},
+"dependencies": {
+"express": "^5.1.0"
+}
+}
