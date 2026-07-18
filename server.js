@@ -37,9 +37,9 @@ message: userMessage
 });
 
 const data = await response.json();
-
+console.log(“n8n Response:”, data);
 res.json({
-reply: data.reply || "No response received."
+  reply: data.output || data.reply || “No response received.”
 });
 
 } catch (error) {
