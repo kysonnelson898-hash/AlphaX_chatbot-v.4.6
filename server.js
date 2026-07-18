@@ -20,7 +20,13 @@ error: "Message is required"
 });
 }
 
-const response = await fetch(process.env.N8N_WEBHOOK, {
+const webhookUrl = process.env.WEBHOOK_URL;
+
+if (!webhookUrl) {
+  throw new Error("WEBHOOK_URL is missing");
+}
+
+const response = await fetch(webhookUrl, {
 method: "POST",
 headers: {
 "Content-Type": "application/json"
